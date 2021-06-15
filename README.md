@@ -1,7 +1,7 @@
 <h1 align="center">
     Byron Springer
 </h1>
-<hp align="center">
+<p align="center">
   <strong>Born to lead.</strong>
 </p>
 <p align="center">
