@@ -2,7 +2,7 @@
     Byron Springer
 </h1>
 <p align="center">
-  <strong>Born to lead.</strong>
+  <strong>BORN TO LEAD..</strong>
 </p>
 <p align="center">
   A curated visual portfolio...
