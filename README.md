@@ -1,13 +1,11 @@
-# portfolio
-
 <h1 align="center">
     Byron Springer
 </h1>
-<h2 align="center">
+<hp align="center">
   <strong>Born to lead.</strong>
-</h2>
+</p>
 <p align="center">
-  <strong>A curated visual portfolio...</strong>
+  A curated visual portfolio...
 </p>
 
 <h3 align="center">
