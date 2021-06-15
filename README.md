@@ -35,4 +35,4 @@ Special Thanks to my amazing dev team:
 
 ## Why did you make this?
 
-The idea for a curated Portfolio for myself came with my presidency at the European School of Karlsruhe. You can find more information [here] (http://instagram.com/byronforpresident/)
+The idea for a curated Portfolio for myself came with my presidency at the European School of Karlsruhe. You can find more information here (http://instagram.com/byronforpresident/)
