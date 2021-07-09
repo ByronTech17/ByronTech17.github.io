@@ -2,6 +2,8 @@ const header = document.getElementById("header");
 const nav = document.querySelector("header nav.container");
 
 const title = document.querySelector(".title");
+title.style.height = `${title.clientWidth * (8 / 25)}px`;
+
 const titleDiv = document.querySelector(".title > div");
 const navTitle = document.querySelector(".nav-title");
 const overlay = document.querySelector(".overlay");
@@ -15,7 +17,6 @@ const interval = setInterval(() => {
     i++;
     titleDiv.style.backgroundPositionY = `${i * 4.16667}%`;
     if (i >= 24) clearInterval(interval);
-    title.style.transition = "all 300ms ease-in-out";
 }, 80);
 
 setTimeout(() => {
@@ -47,4 +48,8 @@ document.addEventListener("scroll", (event) => {
 
     banner.style.filter = filter;
     textContainer.style.filter = filter;
+});
+
+window.addEventListener("resize", () => {
+    title.style.height = `${title.clientWidth * (8 / 25)}px`;
 });

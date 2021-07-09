@@ -141,6 +141,11 @@ nav a:last-child {
     padding: 0;
     aspect-ratio: 25 / 8;
     z-index: 40;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(50rem, 80%);
 }
 
 .title > div {
@@ -150,14 +155,6 @@ nav a:last-child {
     background-size: cover;
     z-index: 40;
     position: absolute;
-}
-
-.title {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: min(50rem, 90%);
 }
 
 /*
