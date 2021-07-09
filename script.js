@@ -39,15 +39,11 @@ document.addEventListener("scroll", (event) => {
     if (window.scrollY >= 40) header.classList.add("scrolled");
     else header.classList.remove("scrolled");
 
-    img.style.top = window.scrollY / 1.3 + "px";
-    textContainer.style.top = window.scrollY / 1.9 + "px";
+    img.style.top = window.scrollY / 4 + "px";
 
-    const filter = `opacity(${1 - window.scrollY / window.innerHeight}) blur(${
-        (window.scrollY / window.innerHeight) * 3
-    }px)`;
-
-    banner.style.filter = filter;
-    textContainer.style.filter = filter;
+    banner.style.filter = `opacity(${
+        1 - window.scrollY / window.innerHeight
+    }) blur(${(window.scrollY / window.innerHeight) * 3}px)`;
 });
 
 window.addEventListener("resize", () => {
