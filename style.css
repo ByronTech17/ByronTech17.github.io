@@ -22,7 +22,6 @@ body {
     background: var(--background);
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
-    line-height: 1.5rem;
     /* font-size: 18px; */
 }
 
@@ -33,6 +32,7 @@ h4,
 h5,
 h6 {
     color: var(--text-primary);
+    line-height: 2.5rem;
 }
 
 h1 {
@@ -55,6 +55,11 @@ a {
     margin-bottom: 0.75rem;
 }
 
+p,
+a {
+    line-height: 1.5rem;
+}
+
 .container {
     padding: 0 2rem;
     width: min(80rem, 100%);
@@ -67,7 +72,7 @@ a {
 
 .overlay {
     position: fixed;
-    z-index: 20;
+    z-index: 25;
     background: #0a0b0e;
     top: 0;
     left: 0;
@@ -165,7 +170,7 @@ nav a:last-child {
 
 .banner {
     position: relative;
-    height: 60vh;
+    height: 40rem;
     overflow: hidden;
 }
 
@@ -190,7 +195,7 @@ nav a:last-child {
     object-fit: cover;
     overflow: hidden;
     left: 0rem;
-    height: 100vh;
+    height: 100%;
 }
 
 .banner .banner-text-wrapper {
@@ -240,7 +245,7 @@ main > div.container {
     top: 0;
     left: 0;
     right: 0;
-    height: 50%;
+    height: 4rem;
     background: linear-gradient(var(--background), transparent);
     z-index: 20;
 }
@@ -250,7 +255,7 @@ main > div.container {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 50%;
+    height: 4rem;
     background: linear-gradient(0deg, var(--background), transparent);
     z-index: 20;
 }
@@ -282,16 +287,17 @@ footer .text-wrapper {
 footer .social {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
 }
 
 footer .social > a {
-    margin: 0 1rem;
-    height: 2.6rem;
-    width: 2.6rem;
-    border-radius: 50%;
+    margin: 0.6rem;
+    height: 3.1rem;
+    width: 3.1rem;
+    border-radius: 999rem;
     background: rgba(255, 255, 255, 0.04);
-    padding: 0.5rem;
+    padding: 0.6rem;
     transition: background 250ms;
 }
 
