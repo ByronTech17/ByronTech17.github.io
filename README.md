@@ -5,7 +5,7 @@
   <strong>BORN TO LEAD.</strong>
 </p>
 <p align="center">
-  A curated visual portfolio...
+  <em>A curated visual portfolio...</em>
 </p>
 
 <h3 align="center">
