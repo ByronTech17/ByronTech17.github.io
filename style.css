@@ -11,9 +11,8 @@
 
 :root {
     --background: #0e0f13;
-    --background-secondary: #090a0c;
     --text-primary: #ffffff;
-    --text-secondary: #999999;
+    --text-secondary: #cccccc;
     --text-accent: #db4f3d;
     --transition-time: 150ms;
 }
@@ -22,9 +21,9 @@ body {
     color: var(--text-secondary);
     background: var(--background);
     font-family: "Montserrat", sans-serif;
-    font-size: 22px;
     overflow-x: hidden;
-    min-height: 5000px;
+    line-height: 1.5rem;
+    /* font-size: 18px; */
 }
 
 h1,
@@ -44,14 +43,26 @@ h2 {
     font-weight: 300;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
 .container {
     padding: 0 2rem;
     width: min(80rem, 100%);
     margin: auto;
 }
 
-p {
-    font-size: 1.5rem;
+.center {
+    text-align: center;
 }
 
 .overlay {
@@ -65,6 +76,12 @@ p {
     transition: background 800ms;
 }
 
+/*
+##########################
+####    NAVIGATION    ####
+##########################
+*/
+
 header {
     position: fixed;
     top: 0;
@@ -73,7 +90,7 @@ header {
     background: none;
     display: flex;
     justify-content: center;
-    z-index: 50;
+    z-index: 60;
     transition: background var(--transition-time);
 }
 
@@ -86,6 +103,10 @@ header nav {
     align-items: stretch;
     height: 4rem;
     vertical-align: middle;
+}
+
+nav .nav-title {
+    font-weight: 700;
 }
 
 nav a {
@@ -106,20 +127,29 @@ nav a:last-child {
     margin-right: 0;
 }
 
-.nav-title,
+.nav-empty {
+    flex: 1 0 auto;
+}
+
+/*
+##########################
+####      TITLE       ####
+##########################
+*/
+
 .title {
     padding: 0;
     aspect-ratio: 25 / 8;
     z-index: 40;
 }
 
-.nav-title > div,
 .title > div {
     width: 100%;
     height: 100%;
     background: url(./assets/signature.png);
     background-size: cover;
     z-index: 40;
+    position: absolute;
 }
 
 .title {
@@ -130,23 +160,20 @@ nav a:last-child {
     width: min(50rem, 90%);
 }
 
-.nav-title {
-    height: 100%;
-    /* display: none; */
-}
-
-.nav-title > div {
-    background-position-y: 100%;
-}
-
-.nav-empty {
-    flex: 1 0 auto;
-}
+/*
+##########################
+####      BANNER      ####
+##########################
+*/
 
 .banner {
     position: relative;
-    height: 100vh;
+    height: 60vh;
     overflow: hidden;
+}
+
+.banner.home-banner {
+    height: 100vh;
 }
 
 .banner-overlay {
@@ -155,8 +182,8 @@ nav a:last-child {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 20;
 }
 
 .banner img {
@@ -169,9 +196,32 @@ nav a:last-child {
     height: 100vh;
 }
 
+.banner .banner-text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+}
+
+.banner .banner-text-wrapper * {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/*
+##########################
+####  MAIN CONTAINER  ####
+##########################
+*/
+
 main {
     background: var(--background);
     position: relative;
+    z-index: 50;
 }
 
 main > div.container {
@@ -188,15 +238,6 @@ main > div.container {
     margin: 1rem 0;
 }
 
-.esk {
-    width: 100%;
-    object-fit: cover;
-}
-
-.esk-wrapper {
-    position: relative;
-}
-
 .gradient-1 {
     position: absolute;
     top: 0;
@@ -204,6 +245,7 @@ main > div.container {
     right: 0;
     height: 50%;
     background: linear-gradient(var(--background), transparent);
+    z-index: 20;
 }
 
 .gradient-2 {
@@ -213,4 +255,60 @@ main > div.container {
     right: 0;
     height: 50%;
     background: linear-gradient(0deg, var(--background), transparent);
+    z-index: 20;
+}
+
+/*
+##########################
+####      FOOTER      ####
+##########################
+*/
+
+footer {
+    width: 100%;
+    /* background: var(--background-secondary); */
+    color: var(--text-primary);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer .divider {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+footer .text-wrapper {
+    padding: 2rem 0;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+footer .social > a {
+    margin: 0 1rem;
+    height: 2.6rem;
+    width: 2.6rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.5rem;
+    transition: background 250ms;
+}
+
+footer .social > a:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+footer .social > a > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+footer .copy {
+    color: white;
+    text-decoration: none;
 }
