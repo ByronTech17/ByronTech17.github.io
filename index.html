@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./css/style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -12,29 +12,33 @@
             rel="stylesheet"
         />
         <title>Byron Springer - Born to lead.</title>
-        <script src="./script.js" defer></script>
+        <script src="./js/script.js" defer></script>
+        <script src="./js/animation.js" defer></script>
     </head>
     <body>
-        <div class="overlay"></div>
+        <div class="menu-overlay" onclick="menuToggle()"></div>
+        <div class="overlay show"></div>
         <div href="./index.html" class="title"><div></div></div>
         <header id="header">
             <nav class="container">
                 <a href="./index.html" class="nav-title">Byron Springer</a>
                 <div class="nav-empty"></div>
-                <a href="./index.html"><span>Home</span></a>
-                <a href="./manifesto.html"><span>Manifesto</span></a>
-                <a href="./contact.html"><span>Contact</span></a>
+                <div class="nav-items">
+                    <a href="./index.html" class="active">Home</a>
+                    <a href="./manifesto.html">Manifesto</a>
+                    <a href="./projects.html">Projects</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+                <button class="menu-icon" onclick="menuToggle()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
             </nav>
         </header>
         <div class="banner home-banner">
             <div class="banner-overlay"></div>
             <img src="./assets/byron.png" alt="Byron Springer" />
-            <div class="banner-text-wrapper">
-                <!-- <div class="container">
-                    <h1>Byron Springer</h1>
-                    <h2>Born to lead.</h2>
-                </div> -->
-            </div>
         </div>
         <main>
             <div class="container">
@@ -55,7 +59,7 @@
             <div class="banner">
                 <div class="banner-overlay"></div>
                 <div class="banner-text-wrapper">
-                    <div class="container center">
+                    <div class="container">
                         <h1>Born to lead.</h1>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing

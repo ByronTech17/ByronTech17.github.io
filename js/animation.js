@@ -1,12 +1,10 @@
-const header = document.getElementById("header");
-const nav = document.querySelector("header nav.container");
-
 const title = document.querySelector(".title");
 title.style.height = `${title.clientWidth * (8 / 25)}px`;
 
-const titleDiv = document.querySelector(".title > div");
 const navTitle = document.querySelector(".nav-title");
 const overlay = document.querySelector(".overlay");
+const titleDiv = document.querySelector(".title div");
+const bannerOverlay = document.querySelector(".home-banner .banner-overlay");
 
 document.body.style.overflowY = "hidden";
 
@@ -20,7 +18,7 @@ const interval = setInterval(() => {
 }, 80);
 
 setTimeout(() => {
-    overlay.style.background = "none";
+    overlay.classList.remove("show");
     setTimeout(() => {
         document.body.style.overflowY = "auto";
         overlay.style.display = "none";
@@ -29,26 +27,17 @@ setTimeout(() => {
     }, 400);
 }, 2500);
 
-const banner = document.querySelector(".home-banner");
+window.addEventListener("resize", () => {
+    title.style.height = `${title.clientWidth * (8 / 25)}px`;
+});
 
-const img = document.querySelector(".home-banner img");
-const textContainer = document.querySelector(".title div");
-const bannerOverlay = document.querySelector(".home-banner .banner-overlay");
-
-document.addEventListener("scroll", (event) => {
-    if (window.scrollY >= 40) header.classList.add("scrolled");
-    else header.classList.remove("scrolled");
-
+document.addEventListener("scroll", () => {
     img.style.top = window.scrollY / 1.3 + "px";
-    textContainer.style.top = window.scrollY / 1.9 + "px";
+    titleDiv.style.top = window.scrollY / 1.9 + "px";
 
     bannerOverlay.style.opacity =
         0.5 + window.scrollY / window.innerHeight / 2.5;
     title.style.filter = `brightness(${
         1 - window.scrollY / window.innerHeight
     })`;
-});
-
-window.addEventListener("resize", () => {
-    title.style.height = `${title.clientWidth * (8 / 25)}px`;
 });
