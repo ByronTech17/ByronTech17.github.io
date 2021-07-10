@@ -20,7 +20,7 @@ const interval = setInterval(() => {
 }, 80);
 
 setTimeout(() => {
-    overlay.style.background = "none";
+    overlay.classList.remove("show");
     setTimeout(() => {
         document.body.style.overflowY = "auto";
         overlay.style.display = "none";
@@ -34,10 +34,20 @@ const banner = document.querySelector(".home-banner");
 const img = document.querySelector(".home-banner img");
 const textContainer = document.querySelector(".title div");
 const bannerOverlay = document.querySelector(".home-banner .banner-overlay");
+const menuOverlay = document.querySelector(".menu-overlay");
 
-document.addEventListener("scroll", (event) => {
-    if (window.scrollY >= 40) header.classList.add("scrolled");
-    else header.classList.remove("scrolled");
+const navItems = document.querySelector("nav .nav-items");
+
+navItems.style.top = `${header.clientHeight}px`;
+
+const onScroll = () => {
+    if (
+        window.scrollY >= 40 ||
+        (navItems.classList.contains("open") && window.innerWidth <= 640)
+    )
+        header.classList.add("scrolled");
+    else if (!navItems.classList.contains("open") || window.innerWidth > 640)
+        header.classList.remove("scrolled");
 
     img.style.top = window.scrollY / 1.3 + "px";
     textContainer.style.top = window.scrollY / 1.9 + "px";
@@ -47,8 +57,17 @@ document.addEventListener("scroll", (event) => {
     title.style.filter = `brightness(${
         1 - window.scrollY / window.innerHeight
     })`;
-});
+};
+
+document.addEventListener("scroll", onScroll);
 
 window.addEventListener("resize", () => {
+    onScroll();
     title.style.height = `${title.clientWidth * (8 / 25)}px`;
 });
+
+function menuToggle() {
+    navItems.classList.toggle("open");
+    menuOverlay.classList.toggle("open");
+    onScroll();
+}

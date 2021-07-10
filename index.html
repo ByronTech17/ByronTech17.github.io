@@ -15,15 +15,23 @@
         <script src="./script.js" defer></script>
     </head>
     <body>
-        <div class="overlay"></div>
+        <div class="menu-overlay" onclick="menuToggle()"></div>
+        <div class="overlay show"></div>
         <div href="./index.html" class="title"><div></div></div>
         <header id="header">
             <nav class="container">
                 <a href="./index.html" class="nav-title">Byron Springer</a>
                 <div class="nav-empty"></div>
-                <a href="./index.html"><span>Home</span></a>
-                <a href="./manifesto.html"><span>Manifesto</span></a>
-                <a href="./contact.html"><span>Contact</span></a>
+                <div class="nav-items">
+                    <a href="./index.html" class="active">Home</a>
+                    <a href="./manifesto.html">Manifesto</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+                <button class="menu-icon" onclick="menuToggle()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
             </nav>
         </header>
         <div class="banner home-banner">
