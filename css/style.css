@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "Creattion Demo";
-    src: url(./assets/creattion-demo.otf);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +11,8 @@
     --text-accent: #1e56ee;
     --transition-time: 150ms;
     --border-radius: 8px;
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 body {
@@ -23,7 +20,10 @@ body {
     background: var(--background);
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
-    /* font-size: 18px; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
 }
 
 h1,
@@ -34,14 +34,7 @@ h5,
 h6 {
     color: var(--text-primary);
     line-height: 2.5rem;
-}
-
-h1 {
     font-weight: 700;
-}
-
-h2 {
-    font-weight: 300;
 }
 
 h1,
@@ -51,24 +44,21 @@ h4,
 h5,
 h6,
 p,
-a {
-    margin-top: 0.75rem;
+a,
+label {
     margin-bottom: 0.75rem;
 }
 
 p,
-a {
+a,
+label {
     line-height: 1.5rem;
 }
 
 .container {
     padding: 0 2rem;
-    width: min(80rem, 100%);
-    margin: auto;
-}
-
-.center {
-    text-align: center;
+    width: min(70rem, 100%);
+    margin: 0 auto;
 }
 
 .overlay {
@@ -83,7 +73,7 @@ a {
 }
 
 .overlay.show {
-    background: #0a0b0e;
+    background: var(--background);
 }
 
 /*
@@ -91,6 +81,11 @@ a {
 ####    NAVIGATION    ####
 ##########################
 */
+
+.header-placeholder {
+    height: 4rem;
+    width: 100%;
+}
 
 header {
     position: fixed;
@@ -245,7 +240,7 @@ nav .menu-icon > div {
 .title > div {
     width: 100%;
     height: 100%;
-    background: url(./assets/signature.png);
+    background: url(../assets/signature.png);
     background-size: cover;
     z-index: 40;
     position: absolute;
@@ -314,11 +309,21 @@ main {
     background: var(--background);
     position: relative;
     z-index: 50;
+    margin-bottom: auto;
 }
 
-main > div.container {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+main .container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: justify;
+}
+
+main .container h1,
+main .container h2,
+main .container h3,
+main .container h4,
+main .container h5,
+main .container h6 {
     text-align: center;
 }
 
@@ -404,4 +409,70 @@ footer .social > a > img {
 footer .copy {
     color: white;
     text-decoration: none;
+}
+
+/*
+##########################
+####      FORMS       ####
+##########################
+*/
+
+input,
+textarea {
+    display: block;
+    box-shadow: var(--box-shadow);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+textarea {
+    padding: 1rem 1.5rem;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+input[type="submit"] {
+    background: var(--text-accent);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: filter 100ms cubic-bezier(0, 0, 0, 1);
+}
+
+input[type="submit"]:hover {
+    filter: brightness(1.2);
+}
+
+.list-titles > li h1,
+.list-titles > li h2,
+.list-titles > li h3,
+.list-titles > li h4,
+.list-titles > li h5,
+.list-titles > li h6 {
+    text-align: left;
+    display: inline-block;
+}
+
+.list-titles > li {
+    list-style-position: inside;
+}
+
+.list-titles > li::marker {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-primary);
 }

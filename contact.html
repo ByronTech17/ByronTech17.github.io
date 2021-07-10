@@ -4,120 +4,109 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./style.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans%7CPlayfair+Display&subset=latin%2Clatin-ext"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap"
             rel="stylesheet"
         />
         <title>Byron Springer - Born to lead.</title>
+        <script src="./js/script.js" defer></script>
+        <script src="https://smtpjs.com/v3/smtp.js" defer></script>
+        <script src="./js/form.js"></script>
     </head>
     <body>
+        <div class="menu-overlay" onclick="menuToggle()"></div>
         <header id="header">
-            <nav>
-                <a href="./index.html">Home</a>
-                <a href="./manifesto.html">Manifesto</a>
-                <a href="./contact.html" class="active">Contact</a>
-                <a
-                    href="https://www.instagram.com/byronforpresident/"
-                    target="_blank"
-                    >Instagram</a
-                >
+            <nav class="container">
+                <a href="./index.html" class="nav-title">Byron Springer</a>
+                <div class="nav-empty"></div>
+                <div class="nav-items">
+                    <a href="./index.html">Home</a>
+                    <a href="./manifesto.html">Manifesto</a>
+                    <a href="./projects.html">Projects</a>
+                    <a href="./contact.html" class="active">Contact</a>
+                </div>
+                <button class="menu-icon" onclick="menuToggle()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
             </nav>
         </header>
-        <!-- <div class="banner">
-            <div class="text-wrapper">
-                <div class="text container">
-                    <h1 class="title">Byron Springer</h1>
-                    <h2>Born to lead.</h2>
-                </div>
+        <main>
+            <div class="container">
+                <h1>Contact</h1>
+                <form class="contact" id="contact">
+                    <label for="name">Your name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="John Doe"
+                        name="name"
+                        required
+                    />
+                    <label for="email">Your email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="john.doe@student.eursc.eu"
+                        required
+                    />
+                    <label for="subject">Your subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Your subject here..."
+                        required
+                    />
+                    <label for="message">Your message</label>
+                    <textarea
+                        id="message"
+                        cols="30"
+                        rows="10"
+                        name="message"
+                        placeholder="Your message here..."
+                        required
+                    ></textarea>
+                    <input type="submit" value="Submit" name="submit" />
+                </form>
             </div>
-            <img
-                src="https://byronmediateam.de/wp-content/uploads/2021/06/cropped-castle-5723701-scaled-1.jpg"
-            />
-        </div> -->
-        <div class="spacing"></div>
-        <main class="container">
-            <h1 class="title">Contact</h1>
-            <form class="contact" id="contact">
-                <label for="name">Your name</label>
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="John Doe"
-                    name="name"
-                    required
-                />
-                <label for="email">Your email</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="john.doe@student.eursc.eu"
-                    required
-                />
-                <label for="subject">Your subject</label>
-                <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    placeholder="Your subject here..."
-                    required
-                />
-                <label for="message">Your message</label>
-                <textarea
-                    id="message"
-                    cols="30"
-                    rows="10"
-                    name="message"
-                    placeholder="Your message here..."
-                    required
-                ></textarea>
-                <input type="submit" value="Submit" name="submit" />
-            </form>
         </main>
-        <footer>
-            <p>
-                Copyright &copy; 2021
-                <span class="white">Byron Springer</span> | Website by
-                <span class="white">Kiko</span>
-            </p>
+        <footer class="container">
+            <div class="divider"></div>
+            <div class="text-wrapper">
+                <div class="social">
+                    <a
+                        target="_blank"
+                        href="https://www.instagram.com/byronforpresident/"
+                    >
+                        <img src="./assets/icons/instagram.svg" />
+                    </a>
+                    <a target="_blank" href="https://twitter.com/tech_byron">
+                        <img src="./assets/icons/twitter.svg" />
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.youtube.com/channel/UCO2QEgi_4ZmXJ7UEgCMCorw"
+                    >
+                        <img src="./assets/icons/youtube.svg" />
+                    </a>
+                    <a target="_blank" href="https://discord.gg/V4Kg6v2AWr">
+                        <img src="./assets/icons/discord.svg" />
+                    </a>
+                    <a target="_blank" href="https://github.com/ByronTech17">
+                        <img src="./assets/icons/github.png" />
+                    </a>
+                </div>
+                <a href="./index.html" class="copy"
+                    >&copy; Byron Springer 2021</a
+                >
+                <p>All rights reserved.</p>
+            </div>
         </footer>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-            const form = document.getElementById("contact");
-            form.addEventListener("submit", (event) => {
-                event.preventDefault();
-
-                const name = document.getElementById("name");
-                const email = document.getElementById("email");
-                const subject = document.getElementById("subject");
-                const message = document.getElementById("message");
-
-                const body = `From: ${name.value} &lt;${email.value}&gt;<br />
-                Subject: ${subject.value}<br /><br />
-                Message:<br />${message.value}<br /><br />
-                --<br />
-                This e-mail was sent from a contact form on Byron Springer (https://byronmediateam.de).<br />
-                This email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed.`;
-
-                console.log(body);
-
-                Email.send({
-                    SecureToken: "a17f7ee9-8939-41f6-8e12-6dd675a5324f",
-                    To: "kikopt1234@gmail.com",
-                    From: "byronmediateam@gmail.com",
-                    Subject: `Byron Springer "${subject.value}"`,
-                    Body: body,
-                }).then((msg) => {
-                    if (msg == "OK") alert("Email successfully sent!");
-                    else
-                        alert(
-                            "There was an error while sending the email: " + msg
-                        );
-                });
-            });
-        </script>
     </body>
 </html>
