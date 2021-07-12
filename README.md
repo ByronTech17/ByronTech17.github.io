@@ -9,9 +9,9 @@
 </p>
 
 <h3 align="center">
-  <a href="https://byronmediateam.de">Portfolio</a>
+  <a href="https://byronspringer.de">Portfolio</a>
   <span> · </span>
-  <a href="http://instagram.com/byronspringer_/">Instagram</a>
+  <a href="http://instagram.com/byronforpresident/">Instagram</a>
   <span> · </span>
   <a href="">Documentation</a>
 </h3>
@@ -21,11 +21,10 @@
 ## Branches
 
 - main -> current final version which you can view on my website.
-- dev -> development branch.
 
 ## UI/UX Design
 
-Figma Board: https://www.figma.com/files/project/32681269/Portfolio?fuid=931890802374018362
+Figma Board: redacted
 
 ## DEV Team
 
