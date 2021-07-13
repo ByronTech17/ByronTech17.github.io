@@ -1,0 +1,10 @@
+.links-404 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.links-404 a {
+    color: var(--text-accent);
+    margin: 0 1.5rem;
+}

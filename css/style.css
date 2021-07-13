@@ -33,26 +33,23 @@ h4,
 h5,
 h6 {
     color: var(--text-primary);
-    line-height: 2.5rem;
+    line-height: 3.25rem;
     font-weight: 700;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-label {
-    margin-bottom: 0.75rem;
+h1.big {
+    font-size: 4rem;
+    line-height: 5rem;
 }
 
 p,
 a,
 label {
-    line-height: 1.5rem;
+    line-height: 2.25rem;
+}
+
+p.big {
+    font-size: 1.3rem;
 }
 
 .container {
@@ -74,6 +71,10 @@ label {
 
 .overlay.show {
     background: var(--background);
+}
+
+.center {
+    text-align: center !important;
 }
 
 /*
@@ -310,6 +311,10 @@ main {
     position: relative;
     z-index: 50;
     margin-bottom: auto;
+}
+
+main.fill {
+    margin: auto 0;
 }
 
 main .container {
