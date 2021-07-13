@@ -13,7 +13,7 @@ let i = 0;
 const interval = setInterval(() => {
     window.scrollTo(0, 0);
     i++;
-    titleDiv.style.backgroundPositionY = `${i * 4.16667}%`;
+    titleDiv.style.backgroundPositionY = `${i * 4.16666666666667}%`;
     if (i >= 24) clearInterval(interval);
 }, 80);
 
