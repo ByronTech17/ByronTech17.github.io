@@ -6,9 +6,8 @@
 
 :root {
     --background: #0e0f13;
-    --text-primary: #ffffff;
-    --text-secondary: #cccccc;
-    --text-accent: #1e56ee;
+    --text: #ffffff;
+    --accent: #1e56ee;
     --transition-time: 150ms;
     --border-radius: 8px;
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -16,7 +15,7 @@
 }
 
 body {
-    color: var(--text-secondary);
+    color: var(--text);
     background: var(--background);
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
@@ -32,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--text-primary);
+    color: var(--text);
     line-height: 2.5rem;
     font-weight: 700;
 }
@@ -156,7 +155,7 @@ nav .nav-items a.active {
 }
 
 nav .nav-items a:hover {
-    color: var(--text-accent);
+    color: var(--accent);
 }
 
 .nav-empty {
@@ -174,7 +173,7 @@ nav .menu-icon {
 nav .menu-icon > div {
     width: 1.5rem;
     height: 0.15rem;
-    background: var(--text-primary);
+    background: var(--text);
     margin: 0.2rem 0;
 }
 
@@ -383,7 +382,7 @@ main .container h6 {
 footer {
     width: 100%;
     /* background: var(--background-secondary); */
-    color: var(--text-primary);
+    color: var(--text);
     padding: 2rem 0;
     text-align: center;
 }
@@ -482,7 +481,7 @@ input[type="submit"],
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: var(--text-accent) !important;
+    background: var(--accent) !important;
     cursor: pointer;
     font-weight: 700;
     font-size: 1rem;
@@ -510,5 +509,5 @@ input[type="submit"]:hover {
 .list-titles > li::marker {
     font-weight: 700;
     font-size: 1.5rem;
-    color: var(--text-primary);
+    color: var(--text);
 }
