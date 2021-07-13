@@ -11,6 +11,7 @@ document.body.style.overflowY = "hidden";
 let i = 0;
 
 const interval = setInterval(() => {
+    title.style.height = `${title.clientWidth * (8 / 25)}px`;
     window.scrollTo(0, 0);
     i++;
     titleDiv.style.backgroundPositionY = `${i * 4.16666666666667}%`;

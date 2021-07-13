@@ -20,7 +20,7 @@
         <div class="menu-overlay" onclick="menuToggle()"></div>
         <header id="header">
             <nav class="container">
-                <a class="nav-title">Byron Springer</a>
+                <a href="/" class="nav-title">Byron Springer</a>
                 <div class="nav-empty"></div>
                 <div class="nav-items">
                     <a href="/">Home</a>
@@ -52,7 +52,7 @@
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="john.doe@student.eursc.eu"
+                        placeholder="john.doe@example.com"
                         required
                     />
                     <label for="subject">Your subject</label>
@@ -72,7 +72,12 @@
                         placeholder="Your message here..."
                         required
                     ></textarea>
-                    <input type="submit" value="Submit" name="submit" />
+                    <input
+                        class="submit"
+                        type="submit"
+                        value="Submit"
+                        name="submit"
+                    />
                 </form>
             </div>
         </main>

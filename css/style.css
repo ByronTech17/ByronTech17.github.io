@@ -33,19 +33,32 @@ h4,
 h5,
 h6 {
     color: var(--text-primary);
-    line-height: 3.25rem;
+    line-height: 2.5rem;
     font-weight: 700;
 }
 
 h1.big {
     font-size: 4rem;
-    line-height: 5rem;
+    line-height: 4.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+label {
+    margin-bottom: 0.75rem;
 }
 
 p,
 a,
 label {
-    line-height: 2.25rem;
+    line-height: 1.75rem;
+    font-size: 1rem;
 }
 
 p.big {
@@ -207,6 +220,7 @@ nav .menu-icon > div {
     nav .nav-items a {
         margin: 0;
         padding: 1rem;
+        line-height: 1rem;
     }
 
     nav .nav-items a.active {
@@ -396,13 +410,22 @@ footer .social > a {
     height: 3.1rem;
     width: 3.1rem;
     border-radius: 999rem;
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.05);
     padding: 0.6rem;
     transition: background 250ms;
+    box-shadow: var(--box-shadow);
+}
+
+@media only screen and (max-width: 640px) {
+    footer .social > a {
+        height: 2.7rem;
+        width: 2.7rem;
+        margin: 0.4rem;
+    }
 }
 
 footer .social > a:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 footer .social > a > img {
@@ -426,6 +449,7 @@ input,
 textarea {
     display: block;
     box-shadow: var(--box-shadow);
+    font-size: 0.9rem;
 }
 
 input[type="text"],
@@ -447,11 +471,18 @@ input[type="password"],
 textarea {
     font-family: "Montserrat", sans-serif;
     width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 3.2rem;
     background: rgba(255, 255, 255, 0.05);
 }
 
-input[type="submit"] {
-    background: var(--text-accent);
+input[type="submit"],
+.submit {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: var(--text-accent) !important;
     cursor: pointer;
     font-weight: 700;
     font-size: 1rem;
