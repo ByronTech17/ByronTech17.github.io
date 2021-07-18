@@ -14,7 +14,8 @@
         <title>Byron Springer - Born to lead.</title>
         <script src="./js/script.js" defer></script>
         <script src="https://smtpjs.com/v3/smtp.js" defer></script>
-        <script src="./js/form.js"></script>
+        <script src="./js/form.js" defer></script>
+        <script src="https://hcaptcha.com/1/api.js" async defer></script>
     </head>
     <body>
         <div class="menu-overlay" onclick="menuToggle()"></div>
@@ -72,12 +73,12 @@
                         placeholder="Your message here..."
                         required
                     ></textarea>
-                    <input
-                        class="submit"
-                        type="submit"
-                        value="Submit"
-                        name="submit"
-                    />
+                    <div
+                        class="h-captcha"
+                        data-sitekey="c22f831f-e3dd-4ccf-8a6c-70bd64a5819e"
+                    ></div>
+                    <div class="error"></div>
+                    <input type="submit" value="Submit" name="submit" />
                 </form>
             </div>
         </main>
