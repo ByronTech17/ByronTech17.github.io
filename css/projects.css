@@ -10,7 +10,9 @@
     border-radius: var(--border-radius);
     position: relative;
     overflow: hidden;
-    cursor: default;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
     box-shadow: var(--box-shadow);
 }
 
@@ -42,4 +44,10 @@
 
 .projects .card:hover .card-content {
     opacity: 1;
+}
+
+img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
