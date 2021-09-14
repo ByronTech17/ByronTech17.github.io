@@ -514,22 +514,10 @@ input[type="submit"]:hover {
     margin-bottom: 0.5rem;
 }
 
-.list-titles > li h1,
-.list-titles > li h2,
-.list-titles > li h3,
-.list-titles > li h4,
-.list-titles > li h5,
-.list-titles > li h6 {
-    text-align: left;
-    display: inline-block;
+ul li {
+    margin-bottom: 1rem;
 }
 
-.list-titles > li {
-    list-style-position: inside;
-}
-
-.list-titles > li::marker {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--text);
+ul li:last-child {
+    margin-bottom: 0;
 }
