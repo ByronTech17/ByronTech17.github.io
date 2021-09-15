@@ -521,3 +521,35 @@ ul li {
 ul li:last-child {
     margin-bottom: 0;
 }
+
+/*
+##########################
+####      OTHER       ####
+##########################
+*/
+
+.yt-wrapper {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.yt-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* - 16:9 aspect ratio (most common) */
+    /* padding-bottom: 62.5%; - 16:10 aspect ratio */
+    /* padding-bottom: 75%; - 4:3 aspect ratio */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.yt-embed iframe,
+.yt-embed embed,
+.yt-embed object {
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
