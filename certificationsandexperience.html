@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <title>Byron Springer</title>
+        <script src="/js/script.js" defer></script>
+        <script src="https://smtpjs.com/v3/smtp.js" defer></script>
+        <script src="/js/form.js" defer></script>
+        <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    </head>
+    <body>
+        <div class="menu-overlay" onclick="menuToggle()"></div>
+        <header id="header">
+            <nav class="container">
+                <a href="/" class="nav-title">Byron Springer</a>
+                <div class="nav-empty"></div>
+                <div class="nav-items">
+                    <a href="/">Home</a>
+                    <a href="/contact" class="active">Contact</a>
+                </div>
+                <button class="menu-icon" onclick="menuToggle()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <h1>Contact</h1>
+                <form class="contact" id="contact">
+                    <label for="name">Your name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="John Doe"
+                        name="name"
+                        required
+                    />
+                    <label for="email">Your email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="john.doe@example.com"
+                        required
+                    />
+                    <label for="subject">Your subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Your subject here..."
+                        required
+                    />
+                    <label for="message">Your message</label>
+                    <textarea
+                        id="message"
+                        cols="30"
+                        rows="10"
+                        name="message"
+                        placeholder="Your message here..."
+                        required
+                    ></textarea>
+                    <div
+                        class="h-captcha"
+                        data-sitekey="c22f831f-e3dd-4ccf-8a6c-70bd64a5819e"
+                    ></div>
+                    <div class="error"></div>
+                    <input type="submit" value="Submit" name="submit" />
+                </form>
+            </div>
+        </main>
+        <footer class="container">
+            <div class="divider"></div>
+            <div class="text-wrapper">
+                <div class="social">
+                    <a
+                        target="_blank"
+                        href="https://www.instagram.com/byronspringer_/"
+                    >
+                        <img src="/assets/icons/instagram.svg" />
+                    </a>
+                </div>
+                <a href="/" class="copy">&copy; Byron Springer 2024</a>
+                <p>All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
